@@ -1,0 +1,23 @@
+defaults: 
+    - pretraining: reinartz
+    - _self_  
+    - override hydra/hydra_logging: disabled  
+    - override hydra/job_logging: disabled  
+
+epochs: 6
+clustering_finetuning_epochs: 7
+
+encoder_dim: 64
+clustering_dim: 128
+num_clusters: 38
+encoder_lr: 4e-5
+clustering_lr: 1e-3
+entropy_weight: 1.
+
+neighbour_dataset_size: 140000
+num_neighbors: 7
+scan_batch_size: 128
+device: cuda
+
+experiment_name: "reinartz_scan_training"
+run_dir: ${now:%Y-%m-%d-%H-%M-%S}

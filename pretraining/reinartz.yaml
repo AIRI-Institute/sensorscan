@@ -1,0 +1,37 @@
+dataset_name: "reinartz_tep"
+
+dataset_window_size: 300
+step_size: 1
+train_batch_size: 1024
+visualize_batch_size: 256
+num_features: 30
+
+augmentor:
+  mean_mask_length: 6
+  masking_ratio: 0.5
+
+  weak_jitter_sigma: 0.08
+  weak_scaling_loc: 1.8
+  weak_scaling_sigma: 0.1
+  strong_scaling_loc: 0.5
+  strong_scaling_sigma: 0.1
+  strong_permute_max_segments: 17
+
+model_input_length: 100
+model_dim: 128
+ff_dim: 512
+num_heads: 16
+num_layers: 3
+dropout_rate: 0.1
+norm: 'LayerNorm'
+
+lr: 1e-3
+weight_decay: 1e-5
+contrastive_weight: 0.7
+epochs: 7
+
+visualize_size: 5000
+
+device: "cuda"
+experiment_name: "reinartz_sll_training"
+run_dir: ${now:%Y-%m-%d-%H-%M-%S}

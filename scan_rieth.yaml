@@ -1,0 +1,20 @@
+defaults:
+  - pretraining: rieth
+  
+epochs: 6
+clustering_finetuning_epochs: 4
+
+encoder_dim: 64
+clustering_dim: 128
+num_clusters: 21
+encoder_lr: 4e-5
+clustering_lr: 1e-3
+entropy_weight: 2.0
+
+neighbour_dataset_size: 140000
+num_neighbors: 5
+scan_batch_size: 128
+device: cuda
+
+experiment_name: "rieth_scan_training"
+run_dir: ${now:%Y-%m-%d-%H-%M-%S}

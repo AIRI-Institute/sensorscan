@@ -1,0 +1,5 @@
+*ipynb
+data/*
+experiments/*
+__pycache__/*
+outputs/*
