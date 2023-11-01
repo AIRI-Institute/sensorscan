@@ -1,0 +1,45 @@
+hydra:
+  run:
+    dir: results/${model}_${dataset}_${now:%Y_%m_%d_%H_%M_%S}
+
+# Name of a model.
+model: "convae"
+
+# Name of a dataset.
+dataset: "rieth_tep"
+
+# Size of a sliding window to generate a sequence of samples.
+window_size: 100
+
+# Size of a step for sliding window to generate a sequence of samples.
+step_size: 1
+
+# Random seed of a training process makes results reproducable.
+random_seed: 0
+
+# Batch size in evaluation
+eval_batch_size: 4096
+
+# Size of a batch in pretraining.
+pretraining_batch_size: 512
+
+# Size of a batch in fine-tuning.
+finetuning_batch_size: 128
+
+# Leraning rate for preraining.
+pretraining_lr: 3e-4
+
+# Leraning rate for fine-tuning.    
+finetuning_lr: 3e-4
+
+# Number of epochs in pretraining.    
+pretraining_n_epochs: 3
+
+# Number of epochs in fine-tuning.    
+finetuning_n_epochs: 12
+
+# Step size for pseudolabeling generation.    
+labeling_step_size: 40
+
+# Path to a .pth file with pretrained model.
+path_to_model:

@@ -1,0 +1,45 @@
+[2023-10-24 12:24:51,815][root][INFO] - Creating dataset
+[2023-10-24 12:26:04,174][root][INFO] - Creating dataloaders
+[2023-10-24 12:26:42,481][root][INFO] - Getting predictions on train
+[2023-10-24 12:27:56,351][root][INFO] - Getting predictions on test
+[2023-10-24 12:28:17,102][root][INFO] - Calculating clustering metrics
+[2023-10-24 12:28:18,380][root][INFO] - 
+Adjusted Rand Index (ARI): 0.2381
+Normalized Mutual Information (NMI): 0.5863
+Unsupervised Clustering Accuracy (ACC): 0.4975
+[2023-10-24 12:28:18,380][root][INFO] - Creating label matching
+[2023-10-24 12:28:19,297][root][INFO] - Calculating FDD metrics
+[2023-10-24 12:28:20,448][root][INFO] - 
+TPR/FPR:
+    Fault 01: 0.7442/0.0000
+    Fault 02: 0.8262/0.0000
+    Fault 03: 0.0000/0.0000
+    Fault 04: 0.9413/0.0000
+    Fault 05: 0.9612/0.0016
+    Fault 06: 0.9227/0.0000
+    Fault 07: 0.9430/0.0000
+    Fault 08: 0.9626/0.0000
+    Fault 09: 0.0000/0.0000
+    Fault 10: 0.9481/0.0000
+    Fault 11: 0.9489/0.0000
+    Fault 12: 0.0000/0.0000
+    Fault 13: 0.8979/0.0000
+    Fault 14: 0.0000/0.0000
+    Fault 15: 0.0000/0.0000
+    Fault 16: 0.0000/0.0000
+    Fault 17: 0.9471/0.0000
+    Fault 18: 0.9496/0.0000
+    Fault 19: 0.9713/0.0000
+    Fault 20: 0.9586/0.0000
+    Fault 21: 0.0000/0.0000
+    Fault 22: 0.0000/0.0000
+    Fault 23: 0.0000/0.0000
+    Fault 24: 0.9750/0.0000
+    Fault 25: 0.9733/0.0000
+    Fault 26: 0.0000/0.0000
+    Fault 27: 0.9869/0.0000
+    Fault 28: 0.0000/0.0000
+Detection TPR: 0.6023
+Detection FPR: 0.0016
+Average Detection Delay (ADD): 155.16
+Total Correct Diagnosis Rate (Total CDR): 0.9402

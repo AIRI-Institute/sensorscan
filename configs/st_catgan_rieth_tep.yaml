@@ -1,0 +1,57 @@
+hydra:
+  run:
+    dir: results/${model}_${dataset}_${now:%Y_%m_%d_%H_%M_%S}
+
+# Name of a model.
+model: "st_catgan"
+
+# Name of a dataset.
+dataset: "rieth_tep"
+
+# Size of a sliding window to generate a sequence of samples.
+window_size: 100
+
+# Size of a step for sliding window to generate a sequence of samples.
+step_size: 1
+
+# Random seed of a training process makes results reproducable.
+random_seed: 0
+
+# Batch size in evaluation
+eval_batch_size: 4096
+
+# Number of input channels in generator.
+in_dim: 128
+    
+# Number of hidden channels in generator and dicriminator.
+h_dim: 128
+
+# Size of a batch in training.
+batch_size: 1024
+    
+# Size of a step for sliding window to generate a sequence of samples for training.
+train_step_size: 10
+
+# Number of epochs in training.
+n_epochs: 200
+
+# Leraning rate to optimize generator and discriminator.    
+lr: 0.0002
+
+# Gamma in ExponentialLR scheduler.    
+exp_lr_gamma: 0.99
+
+# Length of a segment in STFT.
+nperseg: 30
+
+# Number of points to overlap between segments in STFT.
+noverlap: 23
+
+# Path to a .ckpt file with pretrained model.
+path_to_model:
+
+# Number of optimization steps to log progress in TensorBoard.    
+log_every_n_steps: 10
+
+# Number of optimization steps of discriminator.
+n_disc: 2

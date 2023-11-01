@@ -1,0 +1,8 @@
+git+https://github.com/airi-industrial-ai/fddbenchmark@v0.0.3
+joblib
+numpy==1.23.5
+torch>=2.1.0
+pytorch_lightning==1.8.2
+torchvision>=0.16.0
+tensorboard>=2.15.0
+hydra-core==1.3

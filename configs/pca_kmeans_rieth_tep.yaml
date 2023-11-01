@@ -1,0 +1,30 @@
+hydra:
+  run:
+    dir: results/${model}_${dataset}_${now:%Y_%m_%d_%H_%M_%S}
+
+# Name of a model.
+model: "pca_kmeans"
+
+# Name of a dataset.
+dataset: "rieth_tep"
+
+# Size of a sliding window to generate a sequence of samples.
+window_size: 100
+
+# Size of a step for sliding window to generate a sequence of samples.
+step_size: 1
+
+# Random seed of a training process makes results reproducable.
+random_seed: 0
+
+# Batch size in evaluation
+eval_batch_size: 4096
+
+# Number of principal components in PCA reduction.
+latent_dim: 25
+
+# Path to a .joblib file with pretrained model.
+path_to_model:
+
+# Size of a step for sliding window to generate a sequence of samples for training.
+train_step_size: 10

@@ -1,0 +1,74 @@
+hydra:
+  run:
+    dir: results/${model}_${dataset}_${now:%Y_%m_%d_%H_%M_%S}
+
+# Name of a model.
+model: "sensorscan"
+
+# Name of a dataset.
+dataset: "rieth_tep"
+
+# Size of a sliding window to generate a sequence of samples.
+window_size: 100
+
+# Size of a step for sliding window to generate a sequence of samples.
+step_size: 1
+
+# Random seed of a training process makes results reproducable.
+random_seed: 0
+
+# Batch size in evaluation
+eval_batch_size: 4096
+
+# Path to a .pth file with pretrained model.
+path_to_model:
+
+pretraining:
+  dataset_name: ${dataset}
+  dataset_window_size: 300
+  step_size: 1
+  train_batch_size: 1024
+  visualize_batch_size: 256
+  num_features: 30
+
+  augmentor:
+    mean_mask_length: 6
+    masking_ratio: 0.5
+
+    weak_jitter_sigma: 0.08
+    weak_scaling_loc: 1.8
+    weak_scaling_sigma: 0.1
+    strong_scaling_loc: 0.5
+    strong_scaling_sigma: 0.1
+    strong_permute_max_segments: 17
+
+  model_input_length: 100
+  model_dim: 128
+  ff_dim: 512
+  num_heads: 16
+  num_layers: 3
+  dropout_rate: 0.1
+  norm: 'LayerNorm'
+
+  lr: 1e-3
+  weight_decay: 1e-4
+  contrastive_weight: 0.7
+  epochs: 7
+
+  device:
+  
+epochs: 6
+clustering_finetuning_epochs: 4
+
+encoder_dim: 64
+clustering_dim: 128
+num_clusters: 21
+encoder_lr: 4e-5
+clustering_lr: 1e-3
+entropy_weight: 1.4
+
+neighbour_dataset_size: 140000
+num_neighbors: 5
+scan_batch_size: 128
+
+device:
